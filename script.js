@@ -144,3 +144,44 @@ const newString = myArray.join(" "); // now we concert each element in the array
 
 console.log(newString);
 
+// anoymous function
+
+// shorthands 
+
+//arrow, ternary, 
+
+likeJavaScript = !true;
+
+likeJavaScript ? true : false;
+
+console.log(likeJavaScript);
+
+// let dbHost; 
+// if (process.env.DB_HOST) {
+//   dbHost = process.env.DB_HOST;
+// } else {
+//   dbHost = 'localHost';
+// }
+
+// const dbHost = process.env.DB_HOST || 'localhost';
+
+const num1 = Number("100");
+const num2 = Number("100.01");
+
+console.log(num1, num2);
+
+// OR you can do this
+
+const num3 = +"100"
+const num4 = +"100.01"
+
+console.log(num3 + num4) // will read as a number and can therefore add the two numbers
+
+// const num5 = +prompt()
+// console.log(num5);
+
+
+
+
+
+
