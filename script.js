@@ -123,25 +123,24 @@ console.log(areSomeAgesOverThirtyArrow);
 
 let ogString = "the queeN is dEad; long lIve the kiNg!";
 
-console.log(ogString);
-
 ogString = ogString.toLowerCase(); // convert string to lower case
 
-console.log(ogString);
-
 const myArray = ogString.split(" "); // convert string into an array indexed by spaces in string
-
-console.log(myArray);
 
 for (let i = 0; i < myArray.length; i++) { 
   myArray[i] = myArray[i].charAt(0).toUpperCase() + myArray[i].slice(1);
 } // loop through the array and convert the first character of each element to upper case 
 // and slice from the second character to the end of each element (end point undefined as argument so it goes to end)
 // and that slice is added to each element to form the new string "Xxxxxx" etc
-console.log(myArray);
+
+// Bonnie Hall came up with this:
+
+// const myMap = myArray.map(function(word){
+//   return word[0].toUpperCase() + word.slice(1);
+// }) // this is more inline with DRY and uses methods only instead of loops nice
 
 const newString = myArray.join(" "); // now we concert each element in the array into a string, joining by spaces (empty characters)
 // this is opposite of what we're doing with split
 
-console.log(newString); // WOOP WOOP!
+console.log(newString);
 
