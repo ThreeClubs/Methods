@@ -73,10 +73,13 @@ const arrayOfThings = ["books", "pens", "paper", "pencils", "words"];
 
 console.log(arrayOfThings.indexOf("words"));
 
+const booksIndex = arrayOfThings.indexOf("books");
+console.log(booksIndex);
+
 const iceCreamsForEach = ["vanilla", "chocolate", "blueberry"];
 iceCreamsForEach.forEach(function (el, index) {
   // call back funciton = when we pass function into argument
-  console.log(el + " ice-cream"); 
+  console.log(el + " ice-cream");
 });
 
 /////////////////////////
@@ -84,22 +87,61 @@ iceCreamsForEach.forEach(function (el, index) {
 const iceCreamsMap = ["vanilla", "chocolate", "blueberry"];
 
 const orderedIceCreams = iceCreamsMap.map(function (icecream, index) {
-  return `Flavour ${index+1}: ${icecream}`; // use map if you want to return something
+  return `Flavour ${index + 1}: ${icecream}`; // use map if you want to return something
 }); // return will not work with forEach()
 
 console.log(orderedIceCreams);
 
 const icecreamCosts = [2.95, 4, 5];
-const expensiveIcecreamCosts = 
- icecreamCosts.filter(function (cost, index, array) {
-    return cost > 3;
- });
+const expensiveIcecreamCosts = icecreamCosts.filter(function (
+  cost,
+  index,
+  array
+) {
+  return cost > 3;
+});
 
- console.log(expensiveIcecreamCosts); // result == [4,5]
+console.log(expensiveIcecreamCosts); // result == [4,5]
 
+const agesArray = [1, 3, 6, 9, 11, 18, 22, 27, 34, 56, 71];
 
+let isEveryAgeOverThirty = agesArray.every(function (age, index) {
+  return age > 30;
+});
+console.log(isEveryAgeOverThirty);
 
+let areSomeAgesOverThirty = agesArray.some(function (age, index) {
+  return age > 30;
+});
+console.log(areSomeAgesOverThirty);
 
+let areSomeAgesOverThirtyArrow = agesArray.some((age, index) => age > 30);
 
+console.log(areSomeAgesOverThirtyArrow);
 
+// Exercise //
+
+let ogString = "the queeN is dEad; long lIve the kiNg!";
+
+console.log(ogString);
+
+ogString = ogString.toLowerCase(); // convert string to lower case
+
+console.log(ogString);
+
+const myArray = ogString.split(" "); // convert string into an array indexed by spaces in string
+
+console.log(myArray);
+
+for (let i = 0; i < myArray.length; i++) { 
+  myArray[i] = myArray[i].charAt(0).toUpperCase() + myArray[i].slice(1);
+} // loop through the array and convert the first character of each element to upper case 
+// and slice from the second character to the end of each element (end point undefined as argument so it goes to end)
+// and that slice is added to each element to form the new string "Xxxxxx" etc
+console.log(myArray);
+
+const newString = myArray.join(" "); // now we concert each element in the array into a string, joining by spaces (empty characters)
+// this is opposite of what we're doing with split
+
+console.log(newString); // WOOP WOOP!
 
